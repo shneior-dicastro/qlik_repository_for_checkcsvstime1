@@ -1,0 +1,418 @@
+[
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$Field",
+    "qCardinal": 42,
+    "qTags": [
+      "$key",
+      "$hidden",
+      "$system",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$FieldNo",
+    "qCardinal": 40,
+    "qTags": [
+      "$hidden",
+      "$system",
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$Fields",
+    "qCardinal": 2,
+    "qTags": [
+      "$hidden",
+      "$system",
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$Info",
+    "qCardinal": 1,
+    "qTags": [
+      "$hidden",
+      "$system",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$Rows",
+    "qCardinal": 1,
+    "qTags": [
+      "$hidden",
+      "$system",
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$Table",
+    "qCardinal": 2,
+    "qTags": [
+      "$key",
+      "$hidden",
+      "$system",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qName": "CountStatus",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "Table2VariableCheck"
+    ]
+  },
+  {
+    "qName": "TaskListFail",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "Table2VariableCheck"
+    ]
+  },
+  {
+    "qName": "__KEY_app",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "lastExecutionResult"
+    ]
+  },
+  {
+    "qName": "__KEY_lastExecutionResult",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "lastExecutionResult"
+    ]
+  },
+  {
+    "qName": "__KEY_operational",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "lastExecutionResult"
+    ]
+  },
+  {
+    "qName": "__KEY_root",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "lastExecutionResult"
+    ]
+  },
+  {
+    "qName": "appId",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "lastExecutionResult"
+    ]
+  },
+  {
+    "qName": "availabilityStatus",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "lastExecutionResult"
+    ]
+  },
+  {
+    "qName": "createdDate",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "lastExecutionResult"
+    ]
+  },
+  {
+    "qName": "duration",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "lastExecutionResult"
+    ]
+  },
+  {
+    "qName": "enabled",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "lastExecutionResult"
+    ]
+  },
+  {
+    "qName": "executingNodeName",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "lastExecutionResult"
+    ]
+  },
+  {
+    "qName": "fileReferenceID",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "lastExecutionResult"
+    ]
+  },
+  {
+    "qName": "id_u0",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "lastExecutionResult"
+    ]
+  },
+  {
+    "qName": "id_u2",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "lastExecutionResult"
+    ]
+  },
+  {
+    "qName": "id_u3",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "lastExecutionResult"
+    ]
+  },
+  {
+    "qName": "id_u4",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "lastExecutionResult"
+    ]
+  },
+  {
+    "qName": "isManuallyTriggered",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "lastExecutionResult"
+    ]
+  },
+  {
+    "qName": "maxRetries",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "lastExecutionResult"
+    ]
+  },
+  {
+    "qName": "migrationHash",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "lastExecutionResult"
+    ]
+  },
+  {
+    "qName": "modifiedByUserName",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "lastExecutionResult"
+    ]
+  },
+  {
+    "qName": "modifiedDate",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "lastExecutionResult"
+    ]
+  },
+  {
+    "qName": "name_u0",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "lastExecutionResult"
+    ]
+  },
+  {
+    "qName": "name_u1",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "lastExecutionResult"
+    ]
+  },
+  {
+    "qName": "nextExecution",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "lastExecutionResult"
+    ]
+  },
+  {
+    "qName": "privileges_u0",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "lastExecutionResult"
+    ]
+  },
+  {
+    "qName": "privileges_u2",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "lastExecutionResult"
+    ]
+  },
+  {
+    "qName": "privileges_u3",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "lastExecutionResult"
+    ]
+  },
+  {
+    "qName": "privileges_u4",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "lastExecutionResult"
+    ]
+  },
+  {
+    "qName": "publishTime",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "lastExecutionResult"
+    ]
+  },
+  {
+    "qName": "published",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "lastExecutionResult"
+    ]
+  },
+  {
+    "qName": "savedInProductVersion",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "lastExecutionResult"
+    ]
+  },
+  {
+    "qName": "schemaPath",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "lastExecutionResult"
+    ]
+  },
+  {
+    "qName": "scriptLogAvailable",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "lastExecutionResult"
+    ]
+  },
+  {
+    "qName": "scriptLogLocation",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "lastExecutionResult"
+    ]
+  },
+  {
+    "qName": "scriptLogSize",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "lastExecutionResult"
+    ]
+  },
+  {
+    "qName": "startTime",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "lastExecutionResult"
+    ]
+  },
+  {
+    "qName": "status",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "lastExecutionResult"
+    ]
+  },
+  {
+    "qName": "stopTime",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "lastExecutionResult"
+    ]
+  },
+  {
+    "qName": "stream",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "lastExecutionResult"
+    ]
+  },
+  {
+    "qName": "taskSessionTimeout",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "lastExecutionResult"
+    ]
+  },
+  {
+    "qName": "taskType",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "lastExecutionResult"
+    ]
+  }
+]

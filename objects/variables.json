@@ -1,0 +1,250 @@
+[
+  {
+    "qInfo": {
+      "qId": "05ca5ab2-ac48-493d-bc7f-b97ea1b535ab",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "31",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "31"
+  },
+  {
+    "qInfo": {
+      "qId": "0d808a67-433f-4f01-8996-b4b9c6b832fa",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "file_name",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "qs_spend.csv"
+  },
+  {
+    "qInfo": {
+      "qId": "3951ea3c-009e-41ac-844d-71f0efa2deb2",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "time_qs_kpimonitoring",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "10/31/2019 7:00:36 AM"
+  },
+  {
+    "qInfo": {
+      "qId": "437844e5-4efc-4189-b3f6-7410b3517f43",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "FileName",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "qs_spend.csv"
+  },
+  {
+    "qInfo": {
+      "qId": "4f0df87a-7e7a-4b71-815b-5d2064b1a923",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "TaskListFail",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "5504adf2-856a-43c7-ba20-a492c1ba738b",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "FileTimeDay",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "2"
+  },
+  {
+    "qInfo": {
+      "qId": "6c2b68fc-fc47-4d3f-a176-b66cde295603",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "time_qs_provider",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "10/31/2019 9:37:07 AM"
+  },
+  {
+    "qInfo": {
+      "qId": "750cf9d8-fae0-4c39-acb3-64e0ef7c1b44",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "files",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "'qs_provider.csv','qs_cohort.csv','qs_kpimonitoring.csv','qs_spend.csv'"
+  },
+  {
+    "qInfo": {
+      "qId": "7652a535-bbf6-4892-8912-58b559ff3ab9",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "time_qs_spend",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "10/31/2019 7:15:36 AM"
+  },
+  {
+    "qInfo": {
+      "qId": "9844bb32-c3e3-4bbb-80c4-2c32bbcd10b9",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "FileTime",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "8/2/2020 6:53:29 AM"
+  },
+  {
+    "qInfo": {
+      "qId": "a180b14a-25ac-4b21-9b13-e9091c77d1e0",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vvQS_Csv_Testing",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "a9aa56e9-c291-4875-811a-fd86782d4f3d",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "aaa",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "0"
+  },
+  {
+    "qInfo": {
+      "qId": "aa88baaf-a341-4130-8a31-c34640681050",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "a",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "10/31/2019 7:01:20 AM"
+  },
+  {
+    "qInfo": {
+      "qId": "ad79b138-59fa-4979-85db-f5e013400102",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vStartTime",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "1:34:24 PM"
+  },
+  {
+    "qInfo": {
+      "qId": "dca11c15-e238-4fe1-a61b-5187e878622c",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "time_qs_cohort",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "31"
+  },
+  {
+    "qInfo": {
+      "qId": "e82e9bf2-7a04-42ed-9efe-f90cf6eeb9df",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "doc",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "CheckFileIsUpdated"
+  },
+  {
+    "qInfo": {
+      "qId": "f0da8fb8-6872-4070-a8db-a0db85288826",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "MyError",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "f63d1454-2859-4fce-9c9e-bdbbbcc072ff",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "CountStatus",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    }
+  }
+]
