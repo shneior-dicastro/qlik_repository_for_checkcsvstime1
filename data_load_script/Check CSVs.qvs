@@ -1,0 +1,34 @@
+///$tab Check CSVs
+$(Must_Include=lib://Sub Procedures/Sub_Send_Slack_Task_Files.txt);
+$(Must_Include=lib://Paths/Paths.txt)
+LET Msg='';
+if (Hour(Now())=8 and Minute(Now())=00 and time(Now(), 'TT')='AM') then 
+	Set files = 'qs_cohort.csv','qs_kpimonitoring.csv','qs_spend.csv';
+    For Each file_name in $(files)
+		Let FileTimeDay = Day(FileTime('$(vQS_Csv_Path)$(file_name)'));
+		Let FileTime = FileTime('$(vQS_Csv_Path)$(file_name)');
+		let FileName = '$(file_name)';
+		Msg = ':file_folder: $(FileName): Last Update at $(FileTime)';
+        if(FileTimeDay)< Num(Day(Today())) then
+            Call Sub_Send_Slack('$(Msg)');
+        End If;
+	Next;
+EndIf;
+
+if (Hour(Now())=10 and Minute(Now())=00 and time(Now(), 'TT')='AM') then 
+	Set files =  'qs_provider.csv','qs_cohort.csv','qs_kpimonitoring.csv','qs_spend.csv';
+	For Each file_name in $(files)
+      Let FileTimeDay = Day(FileTime('$(vQS_Csv_Path)$(file_name)'));
+      Let FileTime = FileTime('$(vQS_Csv_Path)$(file_name)');
+      let FileName = '$(file_name)';
+      Msg = ':file_folder: $(FileName): Last Update at $(FileTime)';
+      if(FileTimeDay)< Num(Day(Today())) then
+          Call Sub_Send_Slack('$(Msg)');
+      End If;
+	Next;
+EndIf;
+
+
+
+
+//'qs_provider.csv',

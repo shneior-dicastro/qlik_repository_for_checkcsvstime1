@@ -1,0 +1,163 @@
+///$tab Task Fails
+//if Minute(Now())=30 or Minute(Now())=00 then 
+  LIB CONNECT TO 'Repository Tasks';
+//LIB CONNECT TO 'Repository Tasks (analysis_admin)';
+
+  RestConnectorMasterTable:
+  SQL SELECT 
+      "id" AS "id_u4",
+      "createdDate",
+      "modifiedDate",
+      "modifiedByUserName",
+      "isManuallyTriggered",
+      "name" AS "name_u1",
+      "taskType",
+      "enabled",
+      "taskSessionTimeout",
+      "maxRetries",
+      "privileges" AS "privileges_u4",
+      "schemaPath",
+      "__KEY_root",
+      (SELECT 
+          "@Value",
+          "__FK_customProperties"
+      FROM "customProperties" FK "__FK_customProperties" ArrayValueAlias "@Value"),
+      (SELECT 
+          "id" AS "id_u0",
+          "name" AS "name_u0",
+          "appId",
+          "publishTime",
+          "published",
+          "savedInProductVersion",
+          "migrationHash",
+          "availabilityStatus",
+          "privileges" AS "privileges_u0",
+          "stream",
+          "__KEY_app",
+          "__FK_app",
+          (SELECT 
+              "id",
+              "name",
+              "privileges",
+              "__FK_stream"
+          FROM "stream" FK "__FK_stream")
+      FROM "app" PK "__KEY_app" FK "__FK_app"),
+      (SELECT 
+          "id" AS "id_u3",
+          "nextExecution",
+          "privileges" AS "privileges_u3",
+          "__KEY_operational",
+          "__FK_operational",
+          (SELECT 
+              "id" AS "id_u2",
+              "executingNodeName",
+              "status",
+              "startTime",
+              "stopTime",
+              "duration",
+              "fileReferenceID",
+              "scriptLogAvailable",
+              "scriptLogLocation",
+              "scriptLogSize",
+              "privileges" AS "privileges_u2",
+              "__KEY_lastExecutionResult",
+              "__FK_lastExecutionResult",
+              (SELECT 
+                  "id" AS "id_u1",
+                  "detailsType",
+                  "message",
+                  "detailCreatedDate",
+                  "privileges" AS "privileges_u1",
+                  "__FK_details"
+              FROM "details" FK "__FK_details")
+          FROM "lastExecutionResult" PK "__KEY_lastExecutionResult" FK "__FK_lastExecutionResult")
+      FROM "operational" PK "__KEY_operational" FK "__FK_operational"),
+      (SELECT 
+          "@Value" AS "@Value_u0",
+          "__FK_tags"
+      FROM "tags" FK "__FK_tags" ArrayValueAlias "@Value_u0")
+  FROM JSON (wrap on) "root" PK "__KEY_root";
+
+
+  [lastExecutionResult]:
+  LOAD	[id_u2],
+      [executingNodeName],
+      [status],
+      [startTime],
+      [stopTime],
+      [duration],
+      [fileReferenceID],
+      [scriptLogAvailable],
+      [scriptLogLocation],
+      [scriptLogSize],
+      [privileges_u2],
+      [__KEY_lastExecutionResult],
+      [__FK_lastExecutionResult] AS [__KEY_operational]
+  RESIDENT RestConnectorMasterTable
+  WHERE NOT IsNull([__FK_lastExecutionResult]) AND [status] = 8;
+
+
+
+  //[operational]:
+  Inner Join (lastExecutionResult)
+  LOAD [id_u3],
+      [nextExecution],
+      [privileges_u3],
+      [__KEY_operational],
+      [__FK_operational] AS [__KEY_root]
+  RESIDENT RestConnectorMasterTable
+  WHERE NOT IsNull([__FK_operational]);
+
+
+
+  //[root]:
+  Inner Join(lastExecutionResult)
+  LOAD	[id_u4] AS [id_u4],
+      [createdDate],
+      [modifiedDate],
+      [modifiedByUserName],
+      [isManuallyTriggered],
+      [name_u1] AS [name_u1],
+      [taskType],
+      [enabled],
+      [taskSessionTimeout],
+      [maxRetries],
+      [privileges_u4] AS [privileges_u4],
+      [schemaPath],
+      [__KEY_root]
+  RESIDENT RestConnectorMasterTable
+  WHERE NOT IsNull([__KEY_root]) AND enabled = 'True';
+
+
+  //[app]:
+  Inner Join(lastExecutionResult)
+  LOAD	[id_u0],
+      [name_u0],
+      [appId],
+      [publishTime],
+      [published],
+      [savedInProductVersion],
+      [migrationHash],
+      [availabilityStatus],
+      [privileges_u0],
+      [stream],
+      [__KEY_app],
+      [__FK_app] AS [__KEY_root]
+  RESIDENT RestConnectorMasterTable
+  WHERE NOT IsNull([__FK_app]);
+
+
+  DROP TABLE RestConnectorMasterTable;
+  Table2VariableCheck:
+  Load
+      Count(name_u1) AS CountStatus,
+      Concat(name_u1, '  ---And---  ')AS TaskListFail
+  Resident lastExecutionResult;
+  //Group By status;
+  Let CountStatus = Peek('CountStatus'); 
+  Let TaskListFail = Peek('TaskListFail');
+	Msg = ':collision:Task: '&'$(TaskListFail)'&' failed';
+  if CountStatus>0 then
+        Call Sub_Send_Slack('$(Msg)');
+  EndIf;
+//EndIf;
